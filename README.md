@@ -5,13 +5,15 @@ To write a python program for getting the word count from a text.
 PC
 Anaconda - Python 3.7
 ## ALGORITHM: 
-### Step 1: Take the text input from the user.
+### Step 1: Open the file "word.txt" in read mode.
 
-### Step 2: Split the input text into words using whitespace as a delimiter.
+### Step 2: Set a variable num to 0 to keep track of the total number of words.
  
-### Step 3: Split the input text into words using whitespace as a delimiter.
+### Step 3: Iterate Through Each Line: Loop through each line in the file.
+### a. Split the Line into Words: Use the split() method to split the line into words. This will create a list of words.
+### b. Update Counter: Increment the num variable by the number of words found on the current line.
 
-### Step 4: Display the count of words to the user.
+### Step 4: After processing all lines, print the total number of words counted.
 
 ## PROGRAM:
 ```
@@ -19,23 +21,17 @@ Anaconda - Python 3.7
 #Developed by : MOHAMED HAMEEM SAJITH J
 #Register number : 212223240090
 
-def count_words(text):
-    words = text.split()
-    return len(words)
+num = 0
+with open("word1.txt", "r") as f1:
+    for line in f1:
+        words = line.split()  # Split by any whitespace
+        num += len(words)
+print("The total number of words in the file is", num)
 
-def main():
-    text = input("Enter the text: ")
-    word_count = count_words(text)
-    print("Word count:", word_count)
-
-if __name__ == "__main__":
-    main()
 ```
 
 ### OUTPUT:
-![image](https://github.com/Sajith7862/Word-Count/assets/145972360/87545a7b-e392-408b-9c7d-c69b33559ca5)
-
-
+![image](https://github.com/Sajith7862/Word-Count/assets/145972360/0005c67f-16b2-4b5f-a5de-758175b5102a)
 
 ## RESULT:
 Thus the program is written to find the word count from a text.
